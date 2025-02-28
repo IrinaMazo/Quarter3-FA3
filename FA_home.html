@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html>
+<head>
+<link rel="stylesheet" href="AA_CSS.css">
+</head>
+<body>
+
+<div id = "every">
+<h1>Loteria el Magica</h1>
+<p> Get a chance to win the grand prize!<br>Just click the button below to get your <i>lucky lottery ticket:</i></p>
+<button onclick = "OnClick()" >DRAW</button>
+
+<div id="draw">
+<p id = "first"></p>
+<p id = "sec"></p>
+<p id = "third"></p>
+</div>
+
+<p id = "results"></p>
+<p id = "number"></p>
+<p id="time"></p>
+<p id ="remind">LOTTERY DRAWS OUT ON MONDAYS, WEDNESDAYS, AND FRIDAYS ON 9PM—OUT ON CHANNEL 56</p>
+
+</div>
+
+<script>
+function OnClick(){
+	var one = Math.ceil(Math.random() * 20);
+	var two = Math.ceil(Math.random() * 20);
+	var three = Math.ceil(Math.random() * 20);
+	
+	document.getElementById("first").innerHTML = one;
+	document.getElementById("sec").innerHTML = two;
+	document.getElementById("third").innerHTML = three;
+	document.getElementById("results").innerHTML = "Lucky Number of the day is " + bigNum(one,two,three) + "<br>Lucky Winner of the day is Mr/Ms " + nthLetter(one);
+	document.getElementById("time").innerHTML =  "Time till next results: " +  timeTill(two,three);
+	}
+
+function bigNum(isa,dalw,tatl){
+	return Math.max(isa,dalw,tatl);
+	}
+
+function nthLetter(letter){
+	var alphabet = "abcdefghijklmnopqrstuvwxyz"
+	var get = alphabet.charAt(letter - 1);
+	return get;
+	}
+
+function timeTill(x,y){
+	var num = x*y
+	var hours;
+	var min;
+	    if(num>60){
+	       hours = parseInt(num) / 60;
+	       min = parseInt(num) % 60;
+		
+	       return Math.floor(hours) + "hr and " + min + " min.";
+	    }
+	    else {
+	       
+		return num + "min."
+	    }
+
+	}
+</script>
+
+</body>
+
+</html>

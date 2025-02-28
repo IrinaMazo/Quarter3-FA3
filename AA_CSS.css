@@ -1,0 +1,44 @@
+body {
+background-color: white;
+color: #faaf37;
+font-family: fantasy;
+}
+
+#every {
+background: #993445;
+border: 10px solid #993445;
+}
+
+#thing {
+background: pink;
+}
+
+h1 {
+text-align: center;
+font-size: 5em;
+}
+
+p {
+text-align: center;
+font-size: 1.5em;
+}
+
+#draw {
+margin:40px;
+padding-left: 495px;
+font-size: 65px;
+}
+
+#first, #sec, #third {
+float: left;
+padding-left: 15px;
+}
+
+button {
+margin-left: 635px;
+}
+
+#results {
+padding-top:10px;
+clear: left;
+}
